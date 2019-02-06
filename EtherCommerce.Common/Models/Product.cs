@@ -8,6 +8,7 @@ namespace EtherCommerce.Common.Models
         public string ShortDescription { get; set; }
         public string Specification { get; set; }
         public string SKU { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
 
         public int? BrandId { get; set; }
