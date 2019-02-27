@@ -7,6 +7,8 @@ namespace EtherCommerce.Common.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public string AdminComment { get; set; }
+        public int DisplayOrder { get; set; }
 
         public int CreatedById { get; set; }
         public User CreatedBy { get; set; }
@@ -16,6 +18,7 @@ namespace EtherCommerce.Common.Models
         public User LastUpdateBy { get; set; }
         public DateTime LastUpdateAt { get; set; }
 
+        public bool IsPublished { get; set; }
         public bool IsDeleted { get; set; }
     }
 }

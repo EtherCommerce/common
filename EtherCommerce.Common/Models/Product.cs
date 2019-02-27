@@ -29,12 +29,21 @@ namespace EtherCommerce.Common.Models
 
         public bool IsAllowToOrder { get; set; }
         public int StockQuantity { get; set; }
-        // Available stock at which we should reorder
+        /// <summary>
+        /// Available stock at which we should reorder
+        /// </summary>
         public int RestockThreshold { get; set; }
-        // Maximum number of units that can be in-stock at any time (due to physicial/logistical constraints in warehouses)
+        /// <summary>
+        /// Maximum number of units that can be in-stock at any time (due to physicial/logistical constraints in warehouses)
+        /// </summary>
         public int MaxStockThreshold { get; set; }
+        
+        public bool DisableBuyButton { get; set; }
+        public bool DisableWishlistButton { get; set; }
+        public bool DisableAddToCompareListButton { get; set; }
+        public bool DisableComments { get; set; }
+        public bool HideStockAvailability { get; set; }
 
-        public int DisplayOrder { get; set; }
         public int ReviewsCount { get; set; }
         public double RatingAverage { get; set; }
         public Meta Meta { get; set; }
