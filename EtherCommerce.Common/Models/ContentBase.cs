@@ -11,12 +11,12 @@ namespace EtherCommerce.Common.Models
         public int DisplayOrder { get; set; }
 
         public int CreatedById { get; set; }
-        public User CreatedBy { get; set; }
-        public DateTime CreatedAt { get; set; }
+        public SystemAccount CreatedBy { get; set; }
+        public DateTime CreatedAtUtc { get; set; }
 
         public int LastUpdateById { get; set; }
-        public User LastUpdateBy { get; set; }
-        public DateTime LastUpdateAt { get; set; }
+        public SystemAccount LastUpdateBy { get; set; }
+        public DateTime LastUpdateAtUtc { get; set; }
 
         public bool IsPublished { get; set; }
         public bool IsDeleted { get; set; }
