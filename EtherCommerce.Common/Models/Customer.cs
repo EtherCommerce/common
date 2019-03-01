@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EtherCommerce.Common.Models
 {
@@ -14,8 +15,13 @@ namespace EtherCommerce.Common.Models
 
         public string MobilePhone { get; set; }
         public string Email { get; set; }
-        public Address Address { get; set; }
         public string LastIpAddress { get; set; }
+        
+        public int? DefaultShippingAddressId { get; set; }
+        public CustomerAddress DefaultShippingAddress { get; set; }
+        public int? DefaultBillingAddressId { get; set; }
+        public CustomerAddress DefaultBillingAddress { get; set; }
+        public IList<CustomerAddress> UserAddresses { get; set; } = new List<CustomerAddress>();
 
         public bool NewsSubscribtionEnabled { get; set; }
 
