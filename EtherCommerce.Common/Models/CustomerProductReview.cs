@@ -17,8 +17,16 @@ namespace EtherCommerce.Common.Models
         public string ReviewText { get; set; }
         public DateTime CreatedAt { get; set; }
 
-        public bool IsApproved { get; set; }
+        public ReviewStatus Status { get; set; }
         public DateTime? ApprovedAt { get; set; }
         public string ReplyText { get; set; }
+    }
+    
+
+    public enum ReviewStatus
+    {
+        Pending = 1,
+        Approved = 2,
+        Rejected = 3
     }
 }
