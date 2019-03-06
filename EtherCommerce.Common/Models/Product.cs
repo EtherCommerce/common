@@ -55,6 +55,6 @@ namespace EtherCommerce.Common.Models
         public IList<ProductLink> LinkedProductLinks { get; protected set; } = new List<ProductLink>();
         public IList<ProductAttributeValue> AttributeValues { get; protected set; } = new List<ProductAttributeValue>();
         public IList<ProductOptionValue> OptionValues { get; protected set; } = new List<ProductOptionValue>();
-        public IList<CustomerProductReview> CustomerReviews { get; set; }
+        public IList<ProductReview> CustomerReviews { get; set; }
     }
 }
