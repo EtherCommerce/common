@@ -10,12 +10,14 @@ namespace EtherCommerce.Common.MongoDb
     public class MongoInitializer : IDatabaseInitializer
     {
         private readonly IMongoDatabase _database;
+        private readonly IDatabaseSeeder _seeder;
         private readonly bool _seed;
         private bool _initialized;
 
-        public MongoInitializer(IMongoDatabase database, IOptions<MongoOptions> optionsAccessor)
+        public MongoInitializer(IMongoDatabase database, IDatabaseSeeder seeder, IOptions<MongoOptions> optionsAccessor)
         {
             _database = database;
+            _seeder = seeder;
             _seed = optionsAccessor.Value.Seed;
         }
 
@@ -34,6 +36,8 @@ namespace EtherCommerce.Common.MongoDb
             {
                 return;
             }
+
+            await _seeder.SeedAsync();
         }
 
         private void RegisterConventions()
